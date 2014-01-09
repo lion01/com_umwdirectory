@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="pidm" type="text" size="40" class="inputbox"
+        
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_PIDM"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_PIDM" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="fname" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_FNAME"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_FNAME" 
+                
+                
+                 required="true" 
+            maxlength="50" /> 
+
+       <field name="lname" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_LNAME"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_LNAME" 
+                
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            maxlength="50" /> 
+
+       <field name="pname" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_PNAME"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_PNAME" 
+                
+                
+                
+            menu_published="0"
+            filter="raw"
+            maxlength="50" /> 
+
+       <field name="biography" type="editor"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_BIOGRAPHY"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_BIOGRAPHY" 
+                
+                
+                 /> 
+
+       <field name="title" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_TITLE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_TITLE" 
+                
+                
+                
+            filter="raw"
+            maxlength="150" /> 
+
+       <field name="department" type="sql" class="inputbox"
+        
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_DEPARTMENT"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_DEPARTMENT" 
+        
+        multiple="multiple"
+        
+        
+        query="SELECT 0 AS `id`, '- Please select -' AS `department` UNION SELECT `id`, `department` FROM `#__umwdirectory_department`" key_field="id" value_field="department"
+         /> 
+
+       <field name="filter_department" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select department -' AS `department` UNION SELECT `id`, `department` FROM `#__umwdirectory_department`" key_field="id" value_field="department"
+             /> 
+
+       <field name="phone" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_PHONE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_PHONE" 
+                
+                
+                
+            menu_published="0"
+            filter="raw"
+            maxlength="15" /> 
+
+       <field name="email" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_EMAIL"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_EMAIL" 
+                
+                
+                 /> 
+
+       <field name="fax" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_FAX"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_FAX" 
+                
+                
+                
+            menu_published="0"
+            filter="raw"
+            maxlength="12" /> 
+
+       <field name="address" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_ADDRESS"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_ADDRESS" 
+                 default="710 South Atlantic Street" 
+                
+                
+            menu_published="0"
+            filter="raw"
+            maxlength="80" /> 
+
+       <field name="mailbox" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_MAILBOX"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_MAILBOX" 
+                
+                
+                
+            maxlength="15" /> 
+
+       <field name="city" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_CITY"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_CITY" 
+                 default="Dillon" 
+                
+                
+            menu_published="0"
+            filter="raw"
+            maxlength="50" /> 
+
+       <field name="zipcode" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_ZIPCODE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_ZIPCODE" 
+                 default="59725" 
+                
+                
+            maxlength="15" /> 
+
+       <field name="state_province_region" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_STATE_PROVINCE_REGION"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_STATE_PROVINCE_REGION" 
+                 default="Montana" 
+                
+                
+            maxlength="50" /> 
+
+       <field name="user_account" type="user"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_USER_ACCOUNT"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_USER_ACCOUNT" 
+                
+                
+                 /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_CREATED_BY"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_CREATED_BY"  /> 
+
+       <field name="created_date" type="timecreated" default="" 
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_CREATED_DATE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_CREATED_DATE"  /> 
+
+       <field name="modified_by" type="user"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_MODIFIED_BY"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_MODIFIED_BY" 
+                
+                
+                 /> 
+
+       <field name="modified_date" type="timeupdated" default="" 
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_MODIFIED_DATE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_MODIFIED_DATE"  /> 
+
+       <field name="image" type="media"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_IMAGE"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_IMAGE" 
+                
+                
+                
+            directory="/images/" /> 
+
+       <field name="image_alt_text" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_IMAGE_ALT_TEXT"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_IMAGE_ALT_TEXT" 
+                
+                
+                 /> 
+
+       <field name="image_caption" type="text"
+                
+            label="COM_UMWDIRECTORY_FORM_LBL_EMPLOYEE_IMAGE_CAPTION"
+            description="COM_UMWDIRECTORY_FORM_DESC_EMPLOYEE_IMAGE_CAPTION" 
+                
+                
+                 /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_umwdirectory"
+                            section="employee"
+                        />
+
+	</fieldset>
+
+</form>
